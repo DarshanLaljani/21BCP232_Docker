@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  frontend:
+    image: darshanlaljani/21bcp232fend
+    ports:
+      - "8080:8080"
+
+  backend:
+    image: darshanlaljani/21bcp232bend
+    ports:
+      - "5000:5001"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb+srv://explorerdarshanlaljani:Darshan2001@cluster0.6caipl2.mongodb.net/test
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=darshanlaljani
+      - MONGO_INITDB_ROOT_PASSWORD=Darshan2001
