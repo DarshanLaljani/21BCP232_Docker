@@ -4,6 +4,7 @@
 
 This repository contains the Dockerfiles, .dockerignore file, and docker-compose.yml file for a full-stack application with a React frontend and a Node.js backend connected to a MongoDB database.
 
+For more details about project and how to setup visit : https://darshanlaljani.github.io/
 
 ## Backend Dockerfile
 
@@ -25,7 +26,7 @@ The Backend Dockerfile contains the following instructions:
   - Exposes port 5001 inside the container, allowing external access to the backend application.
 
 - `CMD ["npm", "run", "start","--","--host","0.0.0.0"]`
-  - Specifies the command to be executed when the container starts. In this case, it runs the `devStart` script defined in the `package.json` file, which likely starts the backend application in development mode.
+  - Specifies the command to be executed when the container starts. In this case, it runs the `start` script defined in the `package.json` file, which likely starts the backend application in development mode.
 
 
 To create the docker image, simply open up your terminal and change your present working directory to the root directory of your backend. Make sure the docker file is in the same directory and run the command
