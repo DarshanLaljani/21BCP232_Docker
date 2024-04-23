@@ -7,7 +7,7 @@ COPY . .
 # Install dependencies
 RUN npm install
 
-# Expose port 3000 (assuming React app runs on port 3000)
+# Expose port 5001 (assuming React app runs on port 3000)
 EXPOSE 5001
 
 # Command to run the React app
